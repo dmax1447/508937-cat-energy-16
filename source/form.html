@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи - Форма</title>
+</head>
+
+<body>
+
+  <header class="page-header">
+    <img class="page-header__logo-image" src="http://placehold.it/191x39" width="191" height="39" alt="Логотип магазина Кэт Энерджи">
+    <nav class="main-nav page-header__nav">
+      <button class="main-nav__btn" type="button">Открыть меню</button>
+      <ul class="main-nav__menu menu-list">
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="index.html">Главная</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="menu-list__item menu-list__item--active">
+          <a class="menu-list__link">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+
+    <section class="request">
+      <h1 class="request__title main-title">Подбор программы</h1>
+      <p class="request__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <form class="form" method="post" action="https://echo.htmlacademy.ru">
+
+        <fieldset class="form__fieldset">
+          <div class="form__cat-info">
+            <h3 class="visually-hidden">Информация о коте</h3>
+            <div class="text-input">
+              <label class="text-input__label" for="cat-name">Имя:*</label>
+              <input class="text-input__control" id="cat-name" type="text" name="name" placeholder="Барсик" required>
+            </div>
+            <div class="text-input">
+              <label class="text-input__label" for="cat-weight">Вес(кг):*</label>
+              <input class="text-input__control" id="cat-weight" type="text" name="weight" placeholder="7" required>
+            </div>
+            <div class="text-input">
+              <label class="text-input__label" for="cat-age">Возраст: (лет)</label>
+              <input class="text-input__control" id="cat-age" type="text" name="age" placeholder="7">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <div class="form__program-type">
+            <h3 class="visually-hidden">Выбор программы питания:</h3>
+            <div class="radio-input">
+              <input class="radio-input__control" type="radio" name="program-type" value="lose-weight" id="lose-weight">
+              <label class="radio-input__label" for="lose-weight">Похудение</label>
+            </div>
+            <div class="radio-input">
+              <input class="radio-input__control" type="radio" name="program-type" value="gain-weight" id="gain-weight">
+              <label class="radio-input__label" for="gain-weight">Набор массы</label>
+            </div>
+            <div class="radio-input">
+              <input class="radio-input__control" type="radio" name="programm-type" value="dont-know" id="dont-know">
+              <label class="radio-input__label" for="dont-know">Не знаю (нужен ваш совет)</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <div class="form__owner-contacts">
+            <h3 class="form__fieldset-title">Контактные данные(владельца кота)</h3>
+            <div class="text-input">
+              <label class="text-input__label" for="owner-email">E-mail:*</label>
+              <input class="text-input__control" id="owner-email" type="email" name="owner-email" placeholder="kuklachev@gmail.com" required>
+            </div>
+            <div class="text-input">
+              <label class="text-input__label" for="owner-phone">Телефон:*</label>
+              <input class="text-input__control" id="owner-phone" type="tel" name="owner-phone" placeholder="8 (960) 900-60-90" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form__order-comments">
+          <h3 class="form__fieldset-title">Комментарий</h3>
+          <textarea class="form__textarea textarea" name="comments" rows="6">Расскажите обо всех повадках кота</textarea>
+        </div>
+
+        <fieldset class="form__fieldset">
+          <div class="form__additionally">
+            <h3 class="form__fieldset-title">Дополнительно</h3>
+            <div class="checkbox-input">
+              <input class="checkbox-input__control" type="checkbox" name="sugar-substitute" id="sugar-substitute" checked>
+              <label class="checkbox-input__label" for="sugar-substitute">Сахарозаменитель</label>
+            </div>
+            <div class="checkbox-input">
+              <input class="checkbox-input__control" type="checkbox" name="water" id="water">
+              <label class="checkbox-input__label" for="water">Питьевая вода</label>
+            </div>
+            <div class="checkbox-input">
+              <input class="checkbox-input__control" type="checkbox" name="milk" id="milk">
+              <label class="checkbox-input__label" for="milk">Молоко</label>
+            </div>
+            <div class="checkbox-input">
+              <input class="checkbox-input__control" type="checkbox" name="vitamins" id="vitamins">
+              <label class="checkbox-input__label" for="vitamins">Витамины</label>
+            </div>
+          </div>
+        </fieldset>
+        <button class="form__btn btn btn--green btn--submit" type="submit">Отправить заявку</button>
+        <p class="form__notice">* - Обязательные поля</span>
+      </form>
+    </section>
+  </main>
+  <section class="map">
+    <h2 class="visually-hidden">Карта проезда</h2>
+    <!-- карта -->
+  </section>
+
+  <footer class="page-footer">
+    <img class="page-footer__logo-image" src="http://placehold.it/128x24" width="128" height="24" alt="Лого магазина Cat Energy">
+    <div class="page-footer__social"></div>
+    <div class="page-footer__credits credits">
+      <a class="credits__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="credits__logo-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="credits__logo-image"></svg>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
