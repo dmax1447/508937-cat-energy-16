@@ -5,8 +5,10 @@ var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var less = require("gulp-less");
 var postcss = require("gulp-postcss");
+var postcssCustomProperties = require('postcss-custom-properties');
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -16,6 +18,7 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(postcss([postcssCustomProperties()]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
