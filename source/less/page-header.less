@@ -1,4 +1,18 @@
-.page-header {
-  .set-typography("Oswald", 20px, 1, 500);
-  width: 320px;
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 65px;
+}
+
+.page-header__btn {
+  width: 25px;
+  height: 19px;
+  padding: 0;
+  background-color: gray;
+  border: none;
+
+  @media (--tablet-width) {
+    display: none;
+  }
 }

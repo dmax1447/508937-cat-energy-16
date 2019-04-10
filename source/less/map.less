@@ -1,18 +1,40 @@
 .map {
-  width: 320px;
+  position: relative;
 }
 
 .map__intro-wrapper {
-  background-color: var(--gray-light);
+  display: flex;
+  justify-content: space-between;
+
+  @media (--desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    min-height: 200px;
+    background-color: white;
+  }
 }
 
 .map__intro-invitation {
-  .set-typography("Oswald", 16px, 1.25, 400);
   color: var(--black-dark);
   text-transform: uppercase;
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 20px, 25px, 400);
+  }
+  .set-typography("Oswald", 16px, 20px, 400);
 }
 
 .map__intro-address {
-  .set-typography("", 14px, 1.43, 400);
   color: var(--grey-brown);
+
+  @media (--tablet-width) {
+    .set-typography("", 16px, 20px, 400);
+  }
+  .set-typography("", 14px, 20px, 400);
+}
+
+.map__yandexmap {
+  background-color: var(--gray-light);
 }

@@ -3,17 +3,30 @@
 }
 
 .plan__title {
-  .set-typography("Oswald", 24px, 1.54, 400);
   text-transform: uppercase;
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 36px, 36px, 400);
+  }
+  .set-typography("Oswald", 24px, 36px, 400);
 }
 
 .plan__description {
   color: var(--grey-brown);
+
+  @media (--tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 .plan__link {
-  .set-typography("Oswald", 16px, 1, 400);
+  color: var(--black-dark);
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--black-dark);
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 20px, 20px, 400);
+  }
+  .set-typography("Oswald", 16px, 16px, 400);
 }

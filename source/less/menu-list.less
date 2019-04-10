@@ -1,10 +1,31 @@
 .menu-list {
-  list-style: none;
   padding-left: 0;
+  list-style: none;
+
+  @media (--tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .menu-list__link {
+  color: var(--black-dark);
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--black-dark);
+  white-space: nowrap;
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 18px, 25px, 400);
+  }
+
+  @media (--desktop-width) {
+    .set-typography("Oswald", 20px, 25px, 400);
+  }
+  .set-typography("Oswald", 20px, 20px, 500);
+}
+
+.menu-list__link--page-index {
+  @media (--desktop-width) {
+    color: white;
+  }
 }

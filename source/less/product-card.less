@@ -1,9 +1,33 @@
 .product-card {
-  // outline: 1px dashed green;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (--tablet-width) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 38px;
+    background-color: var(--gray-light);
+  }
+}
+
+.product-card__wrapper {
+  width: 50%;
+
+  @media (--tablet-width) {
+    width: 100%;
+  }
 }
 
 .product-card__title {
-  text-transform: uppercase;
   color: var(--black-dark);
-  .set-typography("Oswald", 16px, 1.25, 400);
+  text-transform: uppercase;
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 20px, 20px, 400);
+  }
+  .set-typography("Oswald", 16px, 20px, 400);
+}
+
+.product-card__btn {
+  width: 100%;
 }

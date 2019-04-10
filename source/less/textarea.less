@@ -1,5 +1,10 @@
 .textarea {
-  .set-typography("Oswald", 16px, 1.13, 400);
+  width: 100%;
   color: var(--grey-brown);
   text-transform: uppercase;
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 20px, 30px, 400);
+  }
+  .set-typography("Oswald", 16px, 18px, 400);
 }

@@ -1,5 +1,24 @@
 .fact-list {
+  padding-left: 0;
   list-style: none;
   color: var(--grey-brown);
-  padding-left: 0;
+
+  @media (--tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.fact-list__item {
+  @media (--tablet-width) {
+    width: 45%;
+    min-height: 250px;
+    .set-typography("Arial", 16px, 24px, 400);
+  }
+
+  @media (--desktop-width) {
+    width: 25%;
+  }
+  .set-typography("Arial", 14px, 18px, 400);
 }

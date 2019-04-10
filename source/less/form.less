@@ -1,13 +1,57 @@
 .form__fieldset {
+  padding: 0;
   border: none;
 }
 
 .form__fieldset-title {
-  .set-typography("Oswald", 24px, 1, 400);
   color: var(--black-dark);
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 36px, 36px, 400);
+  }
+  .set-typography("Oswald", 24px, 24px, 400);
 }
 
 .form__notice {
-  .set-typography("", 14px, 1.14, 400);
   color: var(--grey-brown);
+
+  @media (--tablet-width) {
+    .set-typography("", 16px, 16px, 400);
+  }
+  .set-typography("", 14px, 16px, 400);
+}
+
+.form__checkbox-wrap {
+  @media (--tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form__btn {
+  width: 100%;
+
+  @media (--desktop-width) {
+    width: 568px;
+  }
+}
+
+.form__cat-program-wrapper {
+  @media (--desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form__owner-contacts-wrapper {
+  @media (--desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form__btn-notice-wrapper {
+  @media (--desktop-width) {
+    display: flex;
+  }
 }

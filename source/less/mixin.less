@@ -1,6 +1,17 @@
 .set-typography(@family : "Arial", @size : 14px, @height : 1.29, @weight : 400) {
-  font-family: @family, "Arial", sans-serif;
+  font-weight: @weight;
   font-size: @size;
   line-height: @height;
-  font-weight: @weight;
+  font-family: @family, "Arial", sans-serif;
+}
+
+.hide() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
