@@ -1,9 +1,17 @@
 .request__title {
-  .set-typography("Oswald", 36px, 1.67, 400);
   color: var(--black-dark);
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 60px, 60px, 400);
+  }
+  .set-typography("Oswald", 36px, 60px, 400);
 }
 
 .request__description {
-  .set-typography("Oswald", 14px, 1.29, 400);
   text-transform: uppercase;
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 20px, 25px, 400);
+  }
+  .set-typography("Oswald", 14px, 18px, 400);
 }

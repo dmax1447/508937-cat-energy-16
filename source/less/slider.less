@@ -1,6 +1,44 @@
+.slider__controls {
+  display: flex;
+  justify-content: center;
+
+  @media (--tablet-width) {
+    padding: 0 70px;
+  }
+}
+
+.slider__fill-line {
+  width: 84px;
+  height: 14px;
+  border: solid 1px var(--gray-filline);
+  border-radius: 6px;
+
+  @media (--tablet-width) {
+    flex-grow: 1;
+  }
+}
+
 .slider__btn {
-  .set-typography("Oswald", 16px, 1.25, 400);
+  text-transform: uppercase;
   background-color: transparent;
   border: none;
-  text-transform: uppercase;
+  .set-typography("Oswald", 16px, 20px, 400);
+}
+
+.slider__image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.slider__image {
+  width: 100%;
+  height: auto;
+}
+
+.slider__image-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
 }

@@ -1,4 +1,34 @@
+.additional-products__wrapper {
+  @media (--desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additional-products__list {
+  @media (--desktop-width) {
+    flex-grow: 1;
+    max-width: 895px;
+  }
+}
+
 .additional-products__title {
-  .set-typography("Oswald", 24px, 1, 400);
   color: var(--black-dark);
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 36px, 36px, 400);
+  }
+  .set-typography("Oswald", 24px, 24px, 400);
+}
+
+.additional-products__offer-wrap {
+  width: 289px;
+  min-height: 289px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.additional-products__offer-desc {
+  color: white;
+  .set-typography("", 16px, 20px, 400);
 }

@@ -1,14 +1,73 @@
 .intro {
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
   color: white;
+
+  @media (--tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+  @media (--desktop-width) {
+    position: relative;
+    flex-wrap: wrap;
+    min-height: 630px;
+  }
 }
 
 .intro__title {
-  .set-typography("Oswald", 36px, 1, 400);
+  @media (--tablet-width) {
+    color: var(--black-light);
+    .set-typography("Oswald", 60px, 60px, 400);
+  }
+
+  @media (--desktop-width) {
+    width: 420px;
+  }
+  .set-typography("Oswald", 36px, 36px, 400);
 }
 
 .intro__slogan {
-  .set-typography("Oswald", 14px, 1, 400);
+  z-index: 1;
   text-transform: uppercase;
+
+  @media (--tablet-width) {
+    font-size: 20px;
+    color: var(--black-light);
+  }
+
+  @media (--desktop-width) {
+    width: 420px;
+  }
+  .set-typography("Oswald", 14px, 1, 400);
+}
+
+.intro__image {
+  @media (--tablet-width) {
+    z-index: -1;
+    order: 1;
+    width: 709px;
+    height: 609px;
+    margin-top: -80px;
+  }
+
+  @media (--desktop-width) {
+    position: absolute;
+    left: 50%;
+    width: 552px;
+    height: 499px;
+    margin-top: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.intro__btn {
+  width: 100%;
+
+  @media (--tablet-width) {
+    width: 245px;
+    padding-right: 27px;
+    padding-left: 27px;
+    font-size: 20px;
+    line-height: 1;
+  }
 }

@@ -1,0 +1,30 @@
+.recomendation-card {
+  @media (--desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.recomendation-card__text-wrapper {
+  @media (--tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (--desktop-width) {
+    flex-grow: 1;
+  }
+}
+
+.recomendation-card__title {
+  text-transform: uppercase;
+  .set-typography("Oswald", 16px, 1, 400);
+}
+
+.recomendation-card__btn {
+  width: 100%;
+
+  @media (--desktop-width) {
+    width: 245px;
+  }
+}

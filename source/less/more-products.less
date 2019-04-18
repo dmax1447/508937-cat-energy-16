@@ -1,9 +1,28 @@
+.more-products {
+  @media (--tablet-width) {
+    padding: 0 38px;
+  }
+}
+
 .more-products__title {
-  .set-typography("Oswald", 16px, 1.25, 400);
   color: var(--black-dark);
+  text-transform: uppercase;
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 20px, 20px, 400);
+  }
+  .set-typography("Oswald", 16px, 20px, 400);
 }
 
 .more-products__message {
-  .set-typography("", 12px, 1.33, 400);
   color: var(--grey-brown);
+
+  @media (--tablet-width) {
+    .set-typography("", 16px, 16px, 400);
+  }
+  .set-typography("", 12px, 16px, 400);
+}
+
+.more-products__btn {
+  width: 100%;
 }
