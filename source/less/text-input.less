@@ -1,18 +1,87 @@
 .text-input {
   display: flex;
+  align-items: center;
+  margin-bottom: 14px;
   text-transform: uppercase;
+  .set-typography("Oswald", 16px, 18px, 400);
 
   @media (--tablet-width) {
     .set-typography("Oswald", 20px, 20px, 400);
   }
-  .set-typography("Oswald", 16px, 18px, 400);
+
+  @media (--tablet-width) {
+    margin-bottom: 23px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .text-input__label {
+  margin-right: 12px;
   color: var(--black-light);
 }
 
 .text-input__control {
   flex-grow: 1;
-  color: var(--grey-brown);
+  min-height: 49px;
+  padding-left: 15px;
+  color: var(--gray-brown);
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  &:invalid {
+    box-shadow: 0 0 0 2px var(--red-light);
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 2px var(--gray-border-1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--gray-brown);
+  }
+}
+
+.text-input--email {
+  position: relative;
+
+  @media (--desktop-width) {
+    width: 570px;
+    margin-bottom: 0;
+  }
+}
+
+.text-input--phone {
+  position: relative;
+
+  @media (--desktop-width) {
+    width: 570px;
+  }
+}
+
+.text-input__icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.text-input__icon--email {
+  width: 18px;
+  height: 14px;
+}
+
+.text-input__icon--phone {
+  width: 21px;
+  height: 21px;
+}
+
+.text-input__control:hover + .text-input__icon {
+  fill: var(--green-main);
+}
+
+.text-input__control:invalid + .text-input__icon {
+  fill: var(--red-light);
 }

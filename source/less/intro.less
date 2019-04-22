@@ -1,73 +1,106 @@
 .intro {
+  position: relative;
+  margin-bottom: 21px;
+  padding-top: 27px;
+  text-align: center;
   color: white;
 
   @media (--tablet-width) {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
+    margin-bottom: 533px;
+    text-align: left;
   }
 
   @media (--desktop-width) {
     position: relative;
     flex-wrap: wrap;
     min-height: 630px;
+    margin-bottom: 25px;
+    padding-top: 20px;
   }
 }
 
 .intro__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  .set-typography("Oswald", 36px, 36px, 400);
+
   @media (--tablet-width) {
+    margin-bottom: 40px;
+    margin-left: 90px;
     color: var(--black-light);
     .set-typography("Oswald", 60px, 60px, 400);
   }
 
   @media (--desktop-width) {
     width: 420px;
+    margin-top: 80px;
+    margin-bottom: 42px;
+    margin-left: 80px;
   }
-  .set-typography("Oswald", 36px, 36px, 400);
 }
 
 .intro__slogan {
-  z-index: 1;
+  margin-top: 0;
+  margin-bottom: 29px;
   text-transform: uppercase;
+  .set-typography("Oswald", 14px, 1, 400);
 
   @media (--tablet-width) {
+    margin-bottom: 47px;
+    margin-left: 90px;
     font-size: 20px;
     color: var(--black-light);
   }
 
   @media (--desktop-width) {
     width: 420px;
+    margin-bottom: 50px;
+    margin-left: 80px;
   }
-  .set-typography("Oswald", 14px, 1, 400);
 }
 
 .intro__image {
   @media (--tablet-width) {
+    position: absolute;
+    top: 228px;
+    left: 50%;
     z-index: -1;
     order: 1;
     width: 709px;
     height: 609px;
-    margin-top: -80px;
+    transform: translateX(-50%);
   }
 
   @media (--desktop-width) {
-    position: absolute;
-    left: 50%;
+    top: 20px;
+    left: 725px;
     width: 552px;
     height: 499px;
     margin-top: 0;
-    transform: translateX(-50%);
   }
 }
 
 .intro__btn {
   width: 100%;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 
   @media (--tablet-width) {
     width: 245px;
-    padding-right: 27px;
-    padding-left: 27px;
+    margin-left: 90px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-size: 20px;
     line-height: 1;
+  }
+
+  @media (--desktop-width) {
+    margin-left: 80px;
   }
 }

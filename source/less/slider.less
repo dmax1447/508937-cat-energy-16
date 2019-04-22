@@ -1,44 +1,122 @@
 .slider__controls {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (--tablet-width) {
-    padding: 0 70px;
+    width: 570px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (--desktop-width) {
+    margin-right: 0;
+    margin-bottom: 5px;
   }
 }
 
 .slider__fill-line {
+  position: relative;
   width: 84px;
   height: 14px;
-  border: solid 1px var(--gray-filline);
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
+  border: solid 1px var(--gray-border-1);
   border-radius: 6px;
 
   @media (--tablet-width) {
     flex-grow: 1;
+    height: 6px;
+    background-color: var(--gray-border-2);
+    border-radius: 2.5px;
   }
 }
 
-.slider__btn {
+.slider__pin {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 35px;
+  height: 6px;
+  background-color: var(--green-main);
+  border-radius: 3px;
+  cursor: pointer;
+
+  @media (--tablet-width) {
+    top: -16px;
+    left: calc(50% - 15px);
+    width: 34px;
+    height: 34px;
+    border: solid 13px white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px var(--green-main), 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.slider__tag {
   text-transform: uppercase;
   background-color: transparent;
   border: none;
   .set-typography("Oswald", 16px, 20px, 400);
+  cursor: pointer;
+
+  @media (--tablet-width) {
+    padding: 5px 0;
+    border-bottom: 1px dashed gray;
+    .set-typography("Oswald", 20px, 20px, 400);
+
+    &:hover {
+      border-bottom: 1px solid gray;
+    }
+
+    &:active {
+      border-bottom: 1px solid transparent;
+    }
+  }
 }
 
 .slider__image-wrapper {
   position: relative;
-  width: 100%;
+  width: 311px;
+  margin-right: auto;
+  margin-bottom: 29px;
+  margin-left: auto;
+
+  @media (--tablet-width) {
+    width: 690px;
+    margin-bottom: 15px;
+  }
+
+  @media (--desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .slider__image {
   width: 100%;
-  height: auto;
 }
 
 .slider__image-left {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.slider__image-right {
+  width: 100%;
+
+  &--hidden {
+    display: none;
+  }
 }

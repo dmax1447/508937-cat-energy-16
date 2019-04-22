@@ -1,6 +1,25 @@
 .features__title {
+  margin-top: 0;
+  margin-bottom: 28px;
+  .set-typography("Oswald", 36px, 60px, 400);
+
   @media (--tablet-width) {
+    margin-bottom: 74px;
     .set-typography("Oswald", 60px, 60px, 400);
   }
-  .set-typography("Oswald", 36px, 60px, 400);
+}
+
+.features__list {
+  margin-top: 0;
+  margin-bottom: 42px;
+}
+
+.features {
+  @media (--tablet-width) {
+    margin-bottom: 62px;
+  }
+
+  @media (--desktop-width) {
+    margin-bottom: 0;
+  }
 }

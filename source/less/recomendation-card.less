@@ -1,28 +1,82 @@
 .recomendation-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--gray-border);
+
+  &:first-child {
+    border-top: 1px solid var(--gray-border);
+  }
+
+  @media (--tablet-width) {
+    padding-top: 25px;
+    padding-right: 38px;
+    padding-bottom: 28px;
+    padding-left: 38px;
+    border: 1px solid var(--gray-border);
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid var(--gray-border);
+    }
+  }
+
   @media (--desktop-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-right: 0;
+    padding-bottom: 13px;
+    padding-left: 0;
+    border-right: none;
+    border-left: none;
   }
 }
 
 .recomendation-card__text-wrapper {
+  width: 100%;
+  padding-bottom: 10px;
+
   @media (--tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 0;
   }
 
   @media (--desktop-width) {
     flex-grow: 1;
+    align-items: center;
+    width: auto;
+    margin-right: 40px;
+    margin-bottom: 0;
   }
 }
 
 .recomendation-card__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0;
   text-transform: uppercase;
-  .set-typography("Oswald", 16px, 1, 400);
+  white-space: nowrap;
+  .set-typography("Oswald", 16px, 16px, 400);
+
+  @media (--tablet-width) {
+    .set-typography("Oswald", 20px, 20px, 400);
+  }
+
+  @media (--desktop-width) {
+    width: 325px;
+    padding: 0;
+  }
 }
 
 .recomendation-card__btn {
   width: 100%;
+  text-align: center;
+  text-decoration: none;
 
   @media (--desktop-width) {
     width: 245px;

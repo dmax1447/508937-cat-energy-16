@@ -1,5 +1,39 @@
+.credits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
 .credits__link {
-  color: var(--grey-brown);
+  color: var(--gray-brown);
   text-decoration: none;
-  .set-typography("", 16px, 16px, 400);
+  .set-typography("Arial", 16px, 16px, 400);
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (--tablet-width) {
+    margin-right: 20px;
+  }
+}
+
+.credits__logo-link {
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.credits__logo-image {
+  fill: var(--gray-brown);
+
+  &:hover {
+    fill: var(--green-main);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
