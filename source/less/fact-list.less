@@ -1,24 +1,103 @@
 .fact-list {
   padding-left: 0;
   list-style: none;
-  color: var(--grey-brown);
+  color: var(--gray-brown);
 
   @media (--tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    counter-reset: fact-item;
+  }
+
+  @media (--desktop-width) {
+    margin-bottom: 0;
   }
 }
 
 .fact-list__item {
+  position: relative;
+  min-height: 60px;
+  margin-bottom: 20px;
+  padding-left: 80px;
+  .set-typography("Arial", 14px, 18px, 400);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--green-main);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--icon-leaf {
+    &::before {
+      background-image: url("../img/icon-leaf.png");
+    }
+  }
+
+  &--icon-cup {
+    &::before {
+      background-image: url("../img/icon-cup.png");
+    }
+  }
+
+  &--icon-meal {
+    &::before {
+      background-image: url("../img/icon-meal.png");
+    }
+  }
+
+  &--icon-time {
+    &::before {
+      background-image: url("../img/icon-time.png");
+    }
+  }
+
   @media (--tablet-width) {
-    width: 45%;
+    position: relative;
+    width: 46%;
     min-height: 250px;
+    margin-bottom: 68px;
+    padding-top: 112px;
+    padding-right: 70px;
+    padding-left: 0;
+    counter-increment: fact-item;
     .set-typography("Arial", 16px, 24px, 400);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: counter(fact-item);
+      position: absolute;
+      top: -14px;
+      left: 116px;
+      z-index: -1;
+      color: var(--gray-light);
+      .set-typography("Oswald", 280px, 228px, 400);
+    }
   }
 
   @media (--desktop-width) {
-    width: 25%;
+    width: 20%;
+    margin-bottom: 0;
+    padding-right: 0;
   }
-  .set-typography("Arial", 14px, 18px, 400);
 }

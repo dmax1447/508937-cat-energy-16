@@ -1,12 +1,23 @@
 .programs {
+  margin-bottom: 15px;
+
+  @media (--tablet-width) {
+    margin-bottom: 40px;
+  }
+
   @media (--desktop-width) {
     display: flex;
-    justify-content: space-between;
   }
 }
 
 .programs__plan {
+  margin-bottom: 20px;
+
   @media (--desktop-width) {
     width: 570px;
+
+    &:first-of-type {
+      margin-right: auto;
+    }
   }
 }

@@ -13,6 +13,7 @@ backup/
 npm-debug.*
 source/css/*.css
 source/css/*.map
+source/pg/
 Thumbs.db
 notes.txt
 .typograf.json

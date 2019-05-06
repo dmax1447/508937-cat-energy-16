@@ -1,13 +1,35 @@
 .page-footer {
   background-color: var(--gray-light);
+}
+
+.page-footer__logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 94px;
+  border-bottom: 1px solid var(--gray-border);
 
   @media (--tablet-width) {
-    display: flex;
-    justify-content: space-between;
+    height: auto;
   }
 }
 
-.page-footer__credits {
-  display: flex;
-  justify-content: space-between;
+.page-footer__content-wrapper {
+  @media (--tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+  }
+}
+
+.page-footer__logo-image {
+  height: 100%;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

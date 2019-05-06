@@ -2,39 +2,80 @@
   position: relative;
 }
 
+
 .map__intro-wrapper {
   display: flex;
   justify-content: space-between;
+  padding-top: 28px;
+  padding-bottom: 24px;
+  z-index: 1;
+
+  @media (--tablet-width) {
+    padding-top: 64px;
+    padding-right: 70px;
+    padding-bottom: 60px;
+    padding-left: 70px;
+  }
 
   @media (--desktop-width) {
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: calc(50% - 610px);
     width: 570px;
-    min-height: 200px;
     background-color: white;
   }
 }
 
 .map__intro-invitation {
+  width: 45%;
+  margin: 0;
   color: var(--black-dark);
   text-transform: uppercase;
+  .set-typography("Oswald", 16px, 20px, 400);
 
   @media (--tablet-width) {
+    width: 160px;
     .set-typography("Oswald", 20px, 25px, 400);
   }
-  .set-typography("Oswald", 16px, 20px, 400);
 }
 
 .map__intro-address {
-  color: var(--grey-brown);
+  width: 50%;
+  margin: 0;
+  color: var(--gray-brown);
+  .set-typography("Arial", 14px, 20px, 400);
 
   @media (--tablet-width) {
-    .set-typography("", 16px, 20px, 400);
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    text-align: right;
+    .set-typography("Arial", 16px, 20px, 400);
   }
-  .set-typography("", 14px, 20px, 400);
+}
+
+.map__intro-address-city {
+  @media (--tablet-width) {
+    margin-top: auto;
+  }
 }
 
 .map__yandexmap {
+  width: 100%;
+  height: 365px;
   background-color: var(--gray-light);
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @media (--tablet-width) {
+    height: 400px;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+  }
+
+  @media (--desktop-width) {
+    height: 400px;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+  }
 }

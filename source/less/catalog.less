@@ -1,6 +1,40 @@
-.catalog__title {
+.catalog {
+  margin-bottom: 7px;
+  padding-top: 15px;
+
   @media (--tablet-width) {
-    .set-typography("Oswald", 60px, 60px, 400);
+    margin-bottom: 0;
+    padding-top: 25px;
   }
+
+  @media (--desktop-width) {
+    margin-bottom: 0;
+    padding-top: 67px;
+  }
+}
+
+.catalog__title {
+  position: relative;
+  margin: 0;
+  padding-bottom: 30px;
   .set-typography("Oswald", 36px, 60px, 400);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: 1px;
+    background-color: var(--gray-border);
+  }
+
+  @media (--tablet-width) {
+    padding-bottom: 0;
+    .set-typography("Oswald", 60px, 60px, 400);
+
+    &::after {
+      content: none;
+    }
+  }
 }

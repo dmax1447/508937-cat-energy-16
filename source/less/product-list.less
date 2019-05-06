@@ -1,17 +1,38 @@
 .product-list {
+  margin: 0;
   padding-left: 0;
   list-style: none;
 
   @media (--tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 82px;
   }
 }
 
 .product-list__item {
+  position: relative;
+  height: 209px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: 1px;
+    background-color: var(--gray-border);
+  }
+
   @media (--tablet-width) {
     width: 324px;
-    background-color: var(--gray-light);
+    height: 515px;
+    margin-bottom: 56px;
+
+    &::after {
+      content: none;
+    }
   }
 
   @media (--desktop-width) {

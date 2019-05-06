@@ -1,4 +1,34 @@
+.recomendation-desc {
+  width: 100%;
+
+  @media (--tablet-width) {
+    width: auto;
+  }
+
+  @media (--desktop-width) {
+    width: 285px;
+  }
+}
+
 .recomendation-desc__table {
-  color: var(--grey-brown);
-  .set-typography("" , 14px, 1, 400);
+  color: var(--gray-brown);
+  .set-typography("Arial" , 14px, 1, 400);
+}
+
+.recomendation-desc__volume {
+  @media (--tablet-width) {
+    text-align: right;
+  }
+
+  @media (--desktop-width) {
+    text-align: left;
+  }
+}
+
+.recomendation-desc__price {
+  text-align: right;
+
+  @media (--tablet-width) {
+    width: 95px;
+  }
 }

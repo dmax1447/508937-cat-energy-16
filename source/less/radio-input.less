@@ -1,9 +1,64 @@
-.radio-input__label {
-  color: var(--black-light);
-  text-transform: uppercase;
+.radio-input {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  cursor: pointer;
 
   @media (--tablet-width) {
-    .set-typography("Oswald", 20px, 20px, 400);
+    margin-bottom: 0;
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
+}
+
+.radio-input__label {
+  position: relative;
+  padding-left: 45px;
+  color: var(--black-light);
+  text-transform: uppercase;
   .set-typography("Oswald", 16px, 18px, 400);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    background-color: transparent;
+    background-clip: content-box;
+    border: 1px solid var(--gray-border-1);
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover::before {
+    border: 1px solid var(--radio-checkbox-btn-hover-color);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (--tablet-width) {
+    padding-left: 60px;
+    .set-typography("Oswald", 20px, 20px, 400);
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.radio-input__control {
+  display: none;
+
+  &:checked + .radio-input__label::before {
+    background-color: var(--green-main);
+  }
 }
