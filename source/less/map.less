@@ -69,13 +69,25 @@
   background-position: center;
   background-size: contain;
 
+  @media (--retina2x) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
+
   @media (--tablet-width) {
     height: 400px;
     background-image: url("../img/bg-map-tablet@1x.jpg");
+
+    @media (--retina2x) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
   }
 
   @media (--desktop-width) {
     height: 400px;
     background-image: url("../img/bg-map-desktop@1x.jpg");
+
+    @media (--retina2x) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
   }
 }

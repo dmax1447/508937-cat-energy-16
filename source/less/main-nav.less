@@ -34,6 +34,10 @@
     background-position: center;
     background-size: cover;
 
+    @media (--retina2x) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+
     @media (--tablet-width) {
       content: none;
     }
@@ -47,6 +51,10 @@
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-position: left center;
       background-size: auto 100%;
+
+      @media (--retina2x) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 }
