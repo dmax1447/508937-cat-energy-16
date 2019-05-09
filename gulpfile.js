@@ -10,7 +10,7 @@ var postcssCustomMedia = require('postcss-custom-media');
 var sorting = require('postcss-sorting');
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-var typograf = require('gulp-typograf');
+var webp = require('gulp-webp');
 
 
 gulp.task("css", function () {
@@ -44,8 +44,8 @@ gulp.task("server", function () {
 
 gulp.task("start", gulp.series("css", "server"));
 
-gulp.task("typograf", function() {
-  gulp.src("source/*.html")
-    .pipe(typograf({ locale: ["ru", "en-US"] }))
-    .pipe(gulp.dest("source/*.html"));
-});
+gulp.task('webp', () =>
+    gulp.src('source/img/*.png')
+        .pipe(webp())
+        .pipe(gulp.dest('source/img'))
+);
