@@ -27,3 +27,6 @@ indent_style = none
 indent_size = none
 trim_trailing_whitespace = none
 insert_final_newline = false
+
+[source/img/auto-sprite.svg]
+insert_final_newline = false

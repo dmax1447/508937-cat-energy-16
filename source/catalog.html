@@ -6,13 +6,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Кэт энерджи&nbsp;&mdash; Каталог</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
   <script src="js/picturefill.min.js"></script>
-  <script src="js/svgxuse.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=b8c7161f-fd0f-46cf-acf8-b68102e4340c&lang=ru_RU"></script>
 </head>
 
 <body>
+
+  <div style="display: none;">
+    <include src="build/img/auto-sprite.svg"></include>
+  </div>
+
   <header class="page-header">
     <nav class="main-nav page-header__nav">
       <div class="page-header__wrapper">
@@ -361,17 +367,17 @@
         <div class="page-footer__social social">
           <a class="social__link" href="#vk">
             <svg class="social__icon social__icon--vk">
-              <use xlink:href="img/sprite.svg#icon-vk"></use>
+              <use xlink:href="#icon_vk"></use>
             </svg>
           </a>
           <a class="social__link" href="#insta">
             <svg class="social__icon social__icon--insta">
-              <use xlink:href="img/sprite.svg#icon-insta"></use>
+              <use xlink:href="#icon_insta"></use>
             </svg>
           </a>
           <a class="social__link" href="#fb">
             <svg class="social__icon social__icon--fb">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
+              <use xlink:href="#icon_fb"></use>
             </svg>
           </a>
 
@@ -380,7 +386,7 @@
           <a class="credits__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="credits__logo-link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="credits__logo-image">
-              <use xlink:href="img/sprite.svg#academy-logo"></use>
+              <use xlink:href="#icon_logo-academy-footer"></use>
             </svg>
           </a>
         </div>
