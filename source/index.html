@@ -6,13 +6,18 @@
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
   <script src="js/picturefill.min.js"></script>
-  <script src="js/svgxuse.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=b8c7161f-fd0f-46cf-acf8-b68102e4340c&lang=ru_RU"></script>
 </head>
 
 <body>
+
+  <div style="display: none;">
+    <include src="build/img/auto-sprite.svg"></include>
+  </div>
   <header class="page-header">
     <nav class="main-nav page-header__nav main-nav--bg-cat">
       <div class="page-header__wrapper">
@@ -49,7 +54,7 @@
       <picture>
         <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x, img/index-can-desktop@3x.webp 3x">
         <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x, img/index-can-tablet@3x.webp 3x">
-        <source type="image/webp" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x, img/index-can-tablet@3x.webp 3x">
+        <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x, img/index-can-mobile@3x.webp 3x">
         <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x, img/index-can-desktop@3x.png 3x">
         <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x, img/index-can-tablet@3x.jpg 3x">
         <img class="intro__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x, img/index-can-mobile@3x.png 3x" width="280" height="270" alt="стакан корма с курицей">
@@ -105,14 +110,14 @@
         <div class="experience__slider slider">
           <div class="slider__image-wrapper">
             <picture>
-              <source type ="image/webp" media="(min-width: 768px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-              <source type ="image/webp" " srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+              <source type="image/webp" srcset=" img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
               <img class="slider__image slider__image-left slider__image-left--hidden" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="фото пример кота до">
             </picture>
             <picture>
-              <source type ="image/webp" media="(min-width: 768px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-              <source type ="image/webp" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
               <img class="slider__image slider__image-right" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="311" height="232" alt="фото пример кота после">
             </picture>
@@ -149,17 +154,17 @@
         <div class="page-footer__social social">
           <a class="social__link" href="#vk">
             <svg class="social__icon social__icon--vk">
-              <use xlink:href="img/sprite.svg#icon-vk"></use>
+              <use xlink:href="#icon_vk"></use>
             </svg>
           </a>
           <a class="social__link" href="#insta">
             <svg class="social__icon social__icon--insta">
-              <use xlink:href="img/sprite.svg#icon-insta"></use>
+              <use xlink:href="#icon_insta"></use>
             </svg>
           </a>
           <a class="social__link" href="#fb">
             <svg class="social__icon social__icon--fb">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
+              <use xlink:href="#icon_fb"></use>
             </svg>
           </a>
 
@@ -168,7 +173,7 @@
           <a class="credits__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="credits__logo-link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="credits__logo-image">
-              <use xlink:href="img/sprite.svg#academy-logo"></use>
+              <use xlink:href="#icon_logo-academy-footer"></use>
             </svg>
           </a>
         </div>
